@@ -44,6 +44,11 @@ export default {
                     label: 'Contatti',
                     routeName: 'contact',
                 },
+                {
+                    label: 'Post',
+                    routeName: 'post',
+                    // nb: il routeName dell'Header.vue deve essere uguale al name di router.js
+                }
 
           ]
       }
