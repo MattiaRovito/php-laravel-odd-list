@@ -13,7 +13,15 @@
                     <h5 class="card-title">{{post.title}}</h5>
                     <p>{{formatData(post.created_at)}}</p>
                     <p class="card-text">{{ truncate(post.content, 100) }}</p>
-                    <a href="#" class="btn btn-primary">Dettagli</a>
+
+
+
+                    <!-- collegamento per il SinglePost.vue -->
+                    <route-link class="btn btn-primary" :to="{name: 'post-detail', params: {slug: post.slug}}">
+                        Dettagli
+
+                    </route-link>
+                   
                 </div>
             </div>
         </div>
