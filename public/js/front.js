@@ -2494,6 +2494,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'SinglePost',
   data: function data() {
@@ -38601,13 +38612,41 @@ var render = function() {
           _vm._v(_vm._s(_vm.post.title))
         ]),
         _vm._v(" "),
+        _vm.post.category
+          ? _c("p", { staticClass: "card-text btn btn-success" }, [
+              _vm._v(
+                "\n                " +
+                  _vm._s(_vm.post.category.name) +
+                  "\n            "
+              )
+            ])
+          : _c("p", { staticClass: "card-text btn btn-danger" }, [
+              _vm._v(
+                "\n                Non è stata assegnata nessuna categoria\n            "
+              )
+            ]),
+        _vm._v(" "),
         _c("p", { staticClass: "card-text" }, [
           _vm._v(_vm._s(_vm.post.content))
         ]),
         _vm._v(" "),
-        _c("a", { staticClass: "btn btn-primary", attrs: { href: "#" } }, [
-          _vm._v("Go somewhere")
-        ])
+        _c(
+          "div",
+          _vm._l(_vm.post.tags, function(tag) {
+            return _c(
+              "span",
+              { key: tag.id, staticClass: "badge badge-primary mx-2" },
+              [
+                _vm._v(
+                  "\n                   " +
+                    _vm._s(tag.name) +
+                    "\n\n               "
+                )
+              ]
+            )
+          }),
+          0
+        )
       ])
     ])
   ])

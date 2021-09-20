@@ -6,8 +6,22 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title">{{post.title}}</h5>
+                <p class="card-text btn btn-success" v-if="post.category">
+                    {{post.category.name}}
+                </p>
+                <p class="card-text btn btn-danger" v-else>
+                    Non è stata assegnata nessuna categoria
+                </p>
                 <p class="card-text">{{post.content}}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+              
+               <div v-if="post.tags">
+                   <span class="badge badge-primary mx-2 p-2" v-for="tag in post.tags" :key="tag.id">
+                       {{tag.name}}
+
+                   </span>
+               </div>
+
+        
             </div>
         </div>
     </div>
