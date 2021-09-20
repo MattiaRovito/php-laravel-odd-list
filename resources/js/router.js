@@ -4,6 +4,10 @@ import VueRouter from 'vue-router';
 // Questo consente di utilizzarlo come plug-in
 Vue.use(VueRouter);
 
+// Qui importiamo i component
+
+import Home from './page/Home';
+
 
 const router = new VueRouter({
     // si specifica la modalità di visualizzazione
@@ -21,3 +25,9 @@ const router = new VueRouter({
         }
     ]
 });
+
+
+
+
+
+export default router;
