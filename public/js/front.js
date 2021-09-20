@@ -2215,23 +2215,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Header"
+  name: "Header",
+  data: function data() {
+    return {
+      menu: [{
+        label: 'Home',
+        routeName: 'home'
+      }, {
+        label: 'Chi siamo',
+        routeName: 'about'
+      }, {
+        label: 'Contatti',
+        routeName: 'contact'
+      }]
+    };
+  }
 });
 
 /***/ }),
@@ -38049,12 +38048,8 @@ var render = function() {
           [
             _c(
               "router-link",
-              { staticClass: "navbar-brend", attrs: { to: { name: "home" } } },
-              [
-                _vm._v(
-                  "\n                            Navbar\n                        "
-                )
-              ]
+              { staticClass: "navbar-brand", attrs: { to: { name: "home" } } },
+              [_vm._v("\n                    Boolpress\n            ")]
             ),
             _vm._v(" "),
             _vm._m(0),
@@ -38066,69 +38061,34 @@ var render = function() {
                 attrs: { id: "navbarNav" }
               },
               [
-                _c("ul", { staticClass: "navbar-nav" }, [
-                  _c(
-                    "li",
-                    { staticClass: "nav-item" },
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "nav-link",
-                          attrs: { to: { name: "home" } }
-                        },
-                        [
-                          _vm._v(
-                            "\n                            Home\n                        "
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    { staticClass: "nav-item" },
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "nav-link",
-                          attrs: { to: { name: "about" } }
-                        },
-                        [
-                          _vm._v(
-                            "\n                            About\n                        "
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    { staticClass: "nav-item" },
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "nav-link",
-                          attrs: { to: { name: "contact" } }
-                        },
-                        [
-                          _vm._v(
-                            "\n                            Contatti\n                        "
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _vm._m(1)
-                ])
+                _c(
+                  "ul",
+                  { staticClass: "navbar-nav" },
+                  _vm._l(_vm.menu, function(link, index) {
+                    return _c(
+                      "li",
+                      { key: index, staticClass: "nav-item" },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            attrs: { to: { name: link.routeName } }
+                          },
+                          [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(link.label) +
+                                "\n                        "
+                            )
+                          ]
+                        )
+                      ],
+                      1
+                    )
+                  }),
+                  0
+                )
               ]
             )
           ],
@@ -38158,16 +38118,6 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-        _vm._v("Contatti")
-      ])
-    ])
   }
 ]
 render._withStripped = true
