@@ -43,7 +43,7 @@ const router = new VueRouter({
             component: Post
         },
         {
-            path: '/posts/:slug',
+            path: '/post/:slug',
             name: 'post-detail',
             component: SinglePost
         }
