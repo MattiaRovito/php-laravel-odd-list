@@ -65,10 +65,10 @@ class PostController extends Controller
     
         }
 
-            return response()->json([
-                'success' => false,
-                'results' => 'il post cercato non esiste'
-            ]); 
+        return response()->json([
+            'success' => false,
+            'results' => 'il post cercato non esiste'
+        ]); 
 
     }
 
