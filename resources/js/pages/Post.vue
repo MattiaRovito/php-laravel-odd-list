@@ -17,10 +17,10 @@
 
 
                     <!-- collegamento per il SinglePost.vue -->
-                    <route-link class="btn btn-primary" :to="{name: 'post-detail', params: {slug: post.slug}}">
+                    <router-link class="btn btn-primary" :to="{name: 'post-detail', params: {slug: post.slug}}">
                         Dettagli
 
-                    </route-link>
+                    </router-link>
                    
                 </div>
             </div>

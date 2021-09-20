@@ -38467,7 +38467,7 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c(
-                  "route-link",
+                  "router-link",
                   {
                     staticClass: "btn btn-primary",
                     attrs: {
