@@ -6,7 +6,9 @@ Vue.use(VueRouter);
 
 // Qui importiamo i component
 
-import Home from './page/Home';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 
 const router = new VueRouter({
@@ -22,6 +24,16 @@ const router = new VueRouter({
             name: 'home',
             component: Home
             // questo component verrà creato dentro una cartella in resources/js, chiamata pages, la quale rappresenterà le nostre pagine
+        },
+        {
+            path: '/chi-siamo',
+            name: 'about',
+            component: About
+        },
+        {
+            path: '/contatti',
+            name: 'contact',
+            component: Contact
         }
     ]
 });
